@@ -8,7 +8,7 @@ let number1 = parseFloat(prompt('Enter first number: '));
 // input second number
 let number2 = parseFloat(prompt('Enter second number: '));
 
-Let result;
+let result;
 if (operator == '+') {
     result = number1 + number2;
 }
