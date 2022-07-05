@@ -1,25 +1,32 @@
-// Simple arithmetic calculator
-//input operator
-let operator = prompt('Enter operator ( type +, -, *, or /): ');
+alert("A simple arithmetic calculator");
 
-//input first number
-let number1 = parseFloat(prompt('Enter first number: '));
+function add(a, b) {
+    alert((a) + " + " + (b) + " = " + (a + b));
+}
+function subtract(a, b) {
+    alert((a) + " - " + (b) + " = " + (a - b));
+}
+function divide(a, b) {
+    alert((a) + " / " + (b) + " = " + (a / b));
+}
+function multiply(a, b) {
+    alert((a) + " * " + (b) + " = " + (a * b));
+}
+function calculate(a, b, operation) {
+    if (operation == "+") {
+        add(a, b);
+    } else if (operation == "-") {
+        subtract(a, b);
+    } else if (operation == "/") {
+        divide(a, b);
+    } else if (operation == "*") {
+        multiply(a, b);
+    } else {
+        alert("Please type a valid operation: +, -, /, or * ");
+    }
+}
+let operation = prompt("Which operation would you like to perform: add +, subtract -, divide /, multiply * ");
+let a = parseFloat(prompt("Please enter the first number: "));
+let b = parseFloat(prompt("Please enter the second number: "));
 
-// input second number
-let number2 = parseFloat(prompt('Enter second number: '));
-
-let result;
-if (operator == '+') {
-    result = number1 + number2;
-}
-else if (operator == '-') {
-    result = number1 - number2;
-}
-else if (operator == '*') {
-    result = number1 * number2;
-}
-else {
-    result = number1 / number2;
-}
-
-console.log(​'${number1} ${operator} ${number2} = ${result}');
+calculate(a, b, operation);
